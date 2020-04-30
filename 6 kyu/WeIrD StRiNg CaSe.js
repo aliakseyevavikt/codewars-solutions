@@ -17,19 +17,16 @@ toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
 
 function toWeirdCase(str){
     let str2 = '';
-
     for (let i = 0; i < str.length; i+=2) {
         if (str[i] === ' ') {
             str2 += ' ';
-            i = i-1;
+            i--;
         } else {
             str2 += str[i].toUpperCase();
             (i+1 !== str.length)?
                 str2 += str[i+1].toLowerCase(): str2 += ''
         }}
-
     return str2;
-
 }
 
-console.log(toWeirdCase('This is a test'));
+console.log(toWeirdCase('Weird string case'));
