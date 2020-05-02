@@ -17,6 +17,5 @@ countWins(winnerList1, 'Sportland') => should return 0
  */
 
 function countWins(winnerList, country) {
-    let wons = winnerList.filter(el => el.country === country);
-    return wons.length > 0 ? wons.length : 0;
+    return winnerList.filter(el => el.country === country).length;
 }
