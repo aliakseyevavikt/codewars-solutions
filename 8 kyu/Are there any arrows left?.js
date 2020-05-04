@@ -14,5 +14,5 @@ The expected result is a boolean, indicating whether you have any good arrows le
  */
 
 function anyArrows(arrows) {
-    return arrows.some(el => el.damaged === undefined);
+    return arrows.some(arrows => !arrows.damaged);
 }
