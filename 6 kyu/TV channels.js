@@ -30,3 +30,20 @@ function redarr(arr) {
     }
     return obj;
 }
+
+// version 2
+
+function redarr(arr) {
+    arr = arr.sort();
+    let newArr = [];
+    let obj = {};
+    let j = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (!newArr.includes(arr[i])) {
+            newArr.push(arr[i]);
+            obj[`${j}`] = arr[i];
+            j++
+        }
+    }
+    return obj;
+}
