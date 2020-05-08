@@ -1,4 +1,5 @@
 /*
+https://www.codewars.com/kata/582e0e592029ea10530009ce/solutions/javascript
 
 Description:
 Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based),
