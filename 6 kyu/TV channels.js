@@ -34,16 +34,10 @@ function redarr(arr) {
 // version 2
 
 function redarr(arr) {
-    arr = arr.sort();
-    let newArr = [];
+    arr = arr.sort().filter((el, ind) => ind === arr.indexOf(el));
     let obj = {};
-    let j = 0;
     for (let i = 0; i < arr.length; i++) {
-        if (!newArr.includes(arr[i])) {
-            newArr.push(arr[i]);
-            obj[`${j}`] = arr[i];
-            j++
-        }
+        obj[`${i}`] = arr[i];
     }
     return obj;
 }
