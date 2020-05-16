@@ -28,3 +28,9 @@ function rowWeights(array) {
     }
     return [sum1, sum2];
 }
+
+//version 2
+var gimme = function (arr) {
+    return arr.indexOf(+(arr.reduce((acc, el) => acc + el, 0)
+        - Math.max(...arr) - Math.min(...arr)).toFixed(1));
+};
