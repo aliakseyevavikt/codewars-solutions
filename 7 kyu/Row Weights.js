@@ -30,7 +30,10 @@ function rowWeights(array) {
 }
 
 //version 2
-var gimme = function (arr) {
-    return arr.indexOf(+(arr.reduce((acc, el) => acc + el, 0)
-        - Math.max(...arr) - Math.min(...arr)).toFixed(1));
-};
+
+function rowWeights(array) {
+    let sum1 = array.reduce((acc, el, i) => i % 2 === 0 ? acc + el : acc, 0);
+    let sum2 = array.reduce((acc, el, i) => i % 2 !== 0 ? acc + el : acc, 0);
+    return [sum1, sum2];
+}
+

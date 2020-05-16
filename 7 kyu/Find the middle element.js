@@ -24,3 +24,9 @@ var gimme = function (arr) {
         if (arr[i] !== min && arr[i] !== max) return i;
     }
 };
+
+//version 2
+var gimme = function (arr) {
+    return arr.indexOf(+(arr.reduce((acc, el) => acc + el, 0)
+        - Math.max(...arr) - Math.min(...arr)).toFixed(1));
+};
