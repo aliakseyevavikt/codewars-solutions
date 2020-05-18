@@ -54,3 +54,5 @@ function stairs(n) {
     }
     return str;
 }
+
+console.log(stairs(12));
