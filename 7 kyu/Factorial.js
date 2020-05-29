@@ -12,6 +12,6 @@ More details about factorial can be found here.
  */
 
 function factorial(n) {
-    if (n < 0 || n > 12) throw RangeError;
+    if (n < 0 || n > 12) throw new RangeError;
     return n ? n * factorial(n - 1) : 1;
 }
