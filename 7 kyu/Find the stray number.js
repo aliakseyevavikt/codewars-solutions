@@ -1,4 +1,5 @@
 /*
+https://www.codewars.com/kata/57f609022f4d534f05000024
 
 Description:
 You are given an odd-length array of integers, in which all of them are the same, except for one single number.
