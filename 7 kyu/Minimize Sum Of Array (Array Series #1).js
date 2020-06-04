@@ -1,4 +1,5 @@
 /*
+https://www.codewars.com/kata/5a523566b3bfa84c2e00010b/solutions/javascript
 
 Description:
 

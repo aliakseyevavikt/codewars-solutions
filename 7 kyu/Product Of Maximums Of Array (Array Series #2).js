@@ -38,3 +38,9 @@ function maxProduct(numbers, size) {
     }
     return prom;
 }
+
+// short version
+
+function maxProduct(numbers, size) {
+    return numbers.sort((a, b) => b - a).slice(0, size).reduce((acc, curr) => acc * curr, 1)
+}
