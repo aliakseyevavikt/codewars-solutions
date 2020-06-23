@@ -1,4 +1,5 @@
 /*
+https://www.codewars.com/kata/57eb936de1051801d500008a
 
 Description:
 You are given an initial 2-value array (x). You will use this to calculate a score.
