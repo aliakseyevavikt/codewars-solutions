@@ -38,11 +38,11 @@ string s = "01000000X000X011X0X"
 
 function infected(s) {
     let infected = 0, total = 0;
-    let temp = s.split('X');
-    for (let i = 0; i < temp.length; i++) {
-        total += temp[i].length;
-        if (temp[i].includes('1')) {
-            infected += temp[i].length;
+    s = s.split('X');
+    for (let i = 0; i < s.length; i++) {
+        total += s[i].length;
+        if (s[i].includes('1')) {
+            infected += s[i].length;
         }
     }
     return total === 0 ? 0 : infected / total * 100;
