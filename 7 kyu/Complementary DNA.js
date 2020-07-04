@@ -1,4 +1,5 @@
 /*
+https://www.codewars.com/kata/554e4a2f232cdd87d9000038
 
 Description:
 Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions"
@@ -26,4 +27,27 @@ function DNAStrand(dna) {
         else res += 'C';
     }
     return res;
+}
+
+// with RegEx v1
+
+function DNAStrand(dna) {
+    function swap(char) {
+        let str1 = 'ATCG';
+        let str2 = 'TAGC';
+        return str2[str1.indexOf(char)];
+    }
+
+    return dna.replace(/[ATCG]/g, swap);
+}
+
+// with RegEx v2
+
+function DNAStrand(dna) {
+    return dna.replace(/[ATCG]/g, char => 'TAGC'['ATCG'.indexOf(char)]);
+}
+
+
+function correct(string) {
+    return string.replace(/[501]/g, char => 'SOI'['501'.indexOf(char)]);
 }
