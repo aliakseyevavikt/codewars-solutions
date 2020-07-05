@@ -1,4 +1,8 @@
 /*
+https://www.codewars.com/kata/53697be005f803751e0015aa
+
+Description:
+
 Step 1: Create a function called encode() to replace all the lowercase vowels in a given string with numbers
  according to the following pattern:
 
