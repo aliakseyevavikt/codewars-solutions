@@ -18,6 +18,7 @@ More examples in test cases.
 Good luck!
  */
 
+//version 1
 function solve(s, g) {
     for (let i = g; i <= s - g; i++) {
         if (i % g === 0 && (s - i) % g === 0) {
@@ -25,4 +26,10 @@ function solve(s, g) {
         }
     }
     return -1;
+}
+
+
+//version 2
+function solve(s, g) {
+    return ((s - g) % g === 0) ? [g, s - g] : -1;
 }
