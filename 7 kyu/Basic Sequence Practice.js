@@ -28,10 +28,9 @@ function sumOfN(n) {
         if (n > 0) {
             res.push(i + res[res.length - 1]);
         } else {
-            i = -i;
-            res.push(res[res.length - 1] + i);
+            res.push(res[res.length - 1] - i);
         }
-        i = Math.abs(i) + 1;
+        i++;
     }
     return res;
 };
