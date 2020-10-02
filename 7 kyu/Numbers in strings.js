@@ -12,6 +12,12 @@ Good luck!
 Please also try Simple remove duplicates
  */
 
+//version 1
 function solve(s) {
     return Math.max(...s.replace(/[a-z]/g, ' ').split(' '));
+};
+
+//version 2
+function solve(s) {
+    return Math.max(...s.match(/\d+/g));
 };
