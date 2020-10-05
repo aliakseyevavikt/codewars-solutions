@@ -1,0 +1,25 @@
+/*
+https://www.codewars.com/kata/5e030f77cec18900322c535d/train/javascript
+
+Description:
+Given two integers a and x, return the minimum non-negative number to add to / subtract from a to make it a multiple of x.
+
+minimum(10, 6)  //= 2
+
+10+2 = 12 which is a multiple of 6
+Note
+0 is always a multiple of x
+ */
+
+function minimum(a, x) {
+    let temp = a;
+    while (temp % x !== 0) {
+        temp++;
+    }
+    let add = temp - a;
+    temp = a;
+    while (temp % x !== 0) {
+        temp--;
+    }
+    return add < a - temp ? add : a - temp;
+}
