@@ -12,14 +12,5 @@ Note
  */
 
 function minimum(a, x) {
-    let temp = a;
-    while (temp % x !== 0) {
-        temp++;
-    }
-    let add = temp - a;
-    temp = a;
-    while (temp % x !== 0) {
-        temp--;
-    }
-    return add < a - temp ? add : a - temp;
+    return Math.min(a % x, x - a % x);
 }
