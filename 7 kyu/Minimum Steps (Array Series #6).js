@@ -38,5 +38,17 @@ function minimumSteps(numbers, value) {
             count++;
         }
     }
-    return count;
+}
+
+//version 2
+
+function minimumSteps(numbers, value) {
+    numbers = numbers.sort((a, b) => a - b);
+    let sum = numbers[0];
+    let i = 0;
+    while (sum < value) {
+        i++;
+        sum += numbers[i];
+    }
+    return i;
 }
