@@ -43,3 +43,22 @@ function arrayDiff(a, b) {
     }
     return a;
 }
+
+//version 4
+
+function arrayDiff(a, b) {
+    let res = [];
+    for (let i = 0; i < a.length; i++) {
+        let swap = true;
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] === b[j]) {
+                swap = false;
+                break;
+            }
+        }
+        if (swap) {
+            res.push(a[i]);
+        }
+    }
+    return res;
+}
